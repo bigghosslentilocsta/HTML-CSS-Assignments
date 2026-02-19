@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div1{
+    background-color: rgb(193, 193, 185);
+    margin:auto;
+    height: 300px;
+    align-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.div1 h1{
+    font-size:60px;
+}
+.div1 button{
+    text-decoration: none;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+.div2{
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+
+}
+.div2 section{
+    margin:20px
+}
+.div2 button{
+    text-decoration: none;
+    border: none;
+    background-color: rgb(134, 134, 136);
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+footer{
+    background-color: rgb(202, 192, 192);
+    padding: 10px;
+    align-items: baseline;
+}
