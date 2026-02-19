@@ -70,7 +70,8 @@
   gap: 15px;
   padding: 20px;
   position: relative;
-  bottom: 50px;
+  top:50px;
+  right: 200px;
   justify-content: flex-start;
 }
 
@@ -111,6 +112,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
 }
 
 .d2s2 img{
@@ -118,6 +121,9 @@
     height: auto;
     max-height: 400px;
     object-fit: contain;
+    position: relative;
+    right: 150px;
+    top: 50px;
 }
 
 /* Main content text section */
