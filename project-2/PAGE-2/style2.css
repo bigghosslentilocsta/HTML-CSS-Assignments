@@ -1,40 +1,279 @@
+/* Reset Default Browser Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
+nav h3 {
+    font-size: 1.3rem;
+    color: #333;
+}
+
 nav ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 600px;
     list-style-type: none;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
+nav ul li {
+    margin: 0;
+}
+
 nav ul a{
     text-decoration: none;
     color: rgb(3, 86, 86);
-    
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul a:hover {
+    color: rgb(2, 150, 150);
+    text-decoration: underline;
+}
+
+/* Hero Section with City Image */
+.div1{
+    background-color: aquamarine;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    max-width: 100%;
 }
 
 .div1 img{
     width: 200px;
-    height:200px;
+    height: 200px;
     border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
-.div1{
-    background-color: aquamarine;
-    margin: auto;
-    max-width:auto;
-    text-align: center;
-    padding: 40px;
+
+.div1 h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
 }
+
+.div1 p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Features/Content Section with Flexbox */
 .div2{
     display: flex;
     padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-}
-.div2 section img{
-    width: 400px;
-}
-.sec{
+.div2 section {
+    flex: 1;
+    min-width: 250px;
     padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.div2 section:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.sec h1{
+    font-size: 1.4rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.sec p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.div2 section img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet View (1024px and below) */
+@media screen and (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .div1 {
+        padding: 30px;
+    }
+
+    .div1 img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .div1 h2 {
+        font-size: 1.6rem;
+    }
+
+    .div2 {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .div2 section {
+        flex: 0 1 calc(50% - 10px);
+        min-width: 220px;
+    }
+
+    .div2 section img {
+        max-width: 300px;
+    }
+}
+
+/* Mobile View (768px and below) */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    nav h3 {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 0.9rem;
+    }
+
+    .div1 {
+        padding: 20px;
+    }
+
+    .div1 img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .div1 h2 {
+        font-size: 1.3rem;
+    }
+
+    .div1 p {
+        font-size: 0.9rem;
+    }
+
+    .div2 {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .div2 section {
+        flex: 1;
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .sec h1 {
+        font-size: 1.1rem;
+    }
+
+    .sec p {
+        font-size: 0.8rem;
+    }
+
+    .div2 section img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Extra Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 8px 10px;
+    }
+
+    nav h3 {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul a {
+        font-size: 0.8rem;
+    }
+
+    .div1 {
+        padding: 15px;
+    }
+
+    .div1 img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .div1 h2 {
+        font-size: 1rem;
+    }
+
+    .div1 p {
+        font-size: 0.8rem;
+    }
+
+    .div2 {
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .div2 section {
+        padding: 10px;
+    }
+
+    .sec h1 {
+        font-size: 0.95rem;
+    }
+
+    .sec p {
+        font-size: 0.75rem;
+    }
 }

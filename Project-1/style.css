@@ -1,50 +1,229 @@
-*{
+/* Reset Default Browser Styles */\n*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Hero Section - Main Landing Area */
 .div1{
     background-color: rgb(193, 193, 185);
-    margin:auto;
+    margin: auto;
     height: 300px;
+    display: flex;
+    flex-direction: column;
     align-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
 }
+
 .div1 h1{
-    font-size:60px;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
+
+.div1 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
 .div1 button{
     text-decoration: none;
     border: none;
     background-color: blue;
     color: aliceblue;
-    padding: 10px;
+    padding: 12px 20px;
     border-radius: 10px;
     margin-top: 10px;
-
+    cursor: pointer;
+    font-size: 1rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
 }
+
+.div1 button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+/* Features/Services Section with Flexbox Layout */
 .div2{
     display: flex;
+    flex-wrap: wrap;
     margin: 20px;
     padding: 20px;
+    gap: 20px;
+    justify-content: space-around;
+}
 
-}
 .div2 section{
-    margin:20px
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
+
+.div2 section:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.div2 section h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.div2 section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #666;
+}
+
 .div2 button{
     text-decoration: none;
     border: none;
     background-color: rgb(134, 134, 136);
     color: aliceblue;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 10px;
     margin-top: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
+
+.div2 button:hover {
+    background-color: rgb(100, 100, 102);
+    transform: scale(1.05);
+}
+
+/* Footer */
 footer{
     background-color: rgb(202, 192, 192);
-    padding: 10px;
-    align-items: baseline;
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet View (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .div1 {
+        height: auto;
+        padding: 30px;
+    }
+
+    .div1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .div2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .div2 section {
+        min-width: 280px;
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+/* Mobile View (768px and below) */
+@media screen and (max-width: 768px) {
+    .div1 {
+        height: auto;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .div1 h1 {
+        font-size: 2rem;
+    }
+
+    .div1 p {
+        font-size: 0.9rem;
+    }
+
+    .div2 {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .div2 section {
+        flex: 1;
+        min-width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .div2 section h1 {
+        font-size: 1.2rem;
+    }
+
+    .div2 section p {
+        font-size: 0.85rem;
+    }
+
+    .div2 button {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+    .div1 {
+        padding: 15px;
+    }
+
+    .div1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .div1 p {
+        font-size: 0.8rem;
+    }
+
+    .div1 button {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+
+    .div2 {
+        margin: 5px;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .div2 section {
+        padding: 10px;
+        min-width: 100%;
+    }
+
+    .div2 section h1 {
+        font-size: 1rem;
+    }
+
+    .div2 section p {
+        font-size: 0.75rem;
+    }
 }
